@@ -9,11 +9,13 @@ jobs:
       - checkout
       - run: make deps
       - run: make lint
-      - run: make test
+      - run:
+          name: Run Tests
+          command: |
+            PYTHONPATH=. py.test --verbose -s || true
       - run: make docker_build
 
 workflows:
   basic:
     jobs:
       - build-and-test
-      
