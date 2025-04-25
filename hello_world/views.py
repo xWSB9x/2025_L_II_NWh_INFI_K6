@@ -21,6 +21,6 @@ def supported_output():
     return ", ".join(SUPPORTED)
 
 
-def blad():
-    print("To blad"
+ddef blad():
+    print("To blad")
     
