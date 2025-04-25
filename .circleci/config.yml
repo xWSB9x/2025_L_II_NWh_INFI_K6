@@ -14,7 +14,7 @@ jobs:
           command: |
             PYTHONPATH=. py.test --verbose -s || true
       - run: make docker_build
-
+      - run: make docker_push
 workflows:
   basic:
     jobs:
