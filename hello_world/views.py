@@ -8,7 +8,7 @@ msg = "Hello World!"
 
 @app.route('/')
 def index():
-    output = request.args.get('output', 'plain')
+    output = request.args.get('output', PLAIN)
     if output == 'json':
         return jsonify({"imie": "Wiktor", "mgs": "Hello World!"})
     return get_formatted(msg, moje_imie), output.lower()
