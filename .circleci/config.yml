@@ -2,16 +2,18 @@ version: 2.1
 
 jobs:
   build-and-test:
-    docker:
-      - image: cimg/python:3.10 
+    machine:
+      image: ubuntu-2204:2024.01.2
 
     steps:
       - checkout
       - run: make deps
       - run: make lint
       - run: make test
+      - run: make docker_build
 
 workflows:
   basic:
     jobs:
       - build-and-test
+      
