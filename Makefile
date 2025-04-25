@@ -31,3 +31,6 @@ docker_push: docker_build
 	docker push $(TAG); \
 	docker logout;
 	
+new_task:
+		echo "This is a new task"
+		
